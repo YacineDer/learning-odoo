@@ -1,0 +1,37 @@
+<odoo>
+    <!-- Actions for Kanban views -->
+    <record id="action_patient_kanban" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="res_model">clinique.patient</field>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="view_patient_kanban"/>
+    </record>
+
+    <record id="action_medecin_kanban" model="ir.actions.act_window">
+        <field name="name">Médecins</field>
+        <field name="res_model">clinique.medecin</field>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="view_medecin_kanban"/>
+    </record>
+
+    <record id="action_service_kanban" model="ir.actions.act_window">
+        <field name="name">Services</field>
+        <field name="res_model">clinique.service</field>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="view_service_kanban"/>
+    </record>
+
+    <record id="action_admission_kanban" model="ir.actions.act_window">
+        <field name="name">Admissions</field>
+        <field name="res_model">clinique.admission</field>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="view_admission_kanban"/>
+    </record>
+
+    <record id="action_acte_kanban" model="ir.actions.act_window">
+        <field name="name">Actes Médicaux</field>
+        <field name="res_model">clinique.actes</field>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="view_actes_kanban"/>
+    </record>
+</odoo>

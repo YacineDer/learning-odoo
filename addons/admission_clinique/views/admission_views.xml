@@ -1,0 +1,27 @@
+<odoo>
+    <!-- Kanban view for Admissions -->
+    <record id="view_admission_kanban" model="ir.ui.view">
+        <field name="name">clinique.admission.kanban</field>
+        <field name="model">clinique.admission</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="patient_id"/>
+                <field name="medecin_id"/>
+                <field name="service_id"/>
+                <field name="admission_date"/>
+                <field name="status"/>
+
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_details">
+                            <strong><field name="patient_id"/> - <field name="status"/></strong>
+                            <div><strong>Médecin:</strong> <field name="medecin_id"/></div>
+                            <div><strong>Service:</strong> <field name="service_id"/></div>
+                            <div><strong>Date d'admission:</strong> <field name="admission_date"/></div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+</odoo>

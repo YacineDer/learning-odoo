@@ -1,0 +1,27 @@
+<odoo>
+    <!-- Kanban view for Patients -->
+    <record id="view_patient_kanban" model="ir.ui.view">
+        <field name="name">clinique.patient.kanban</field>
+        <field name="model">clinique.patient</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name"/>
+                <field name="family_name"/>
+                <field name="birth_date"/>
+                <field name="gender"/>
+                <field name="age"/>
+
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_details">
+                            <strong><field name="name"/> <field name="family_name"/></strong>
+                            <div><strong>Date de naissance:</strong> <field name="birth_date"/></div>
+                            <div><strong>Âge:</strong> <field name="age"/></div>
+                            <div><strong>Sexe:</strong> <field name="gender"/></div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+</odoo>

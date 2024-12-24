@@ -1,0 +1,22 @@
+<odoo>
+    <!-- Kanban view for Actes -->
+    <record id="view_actes_kanban" model="ir.ui.view">
+        <field name="name">clinique.actes.kanban</field>
+        <field name="model">clinique.actes</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name"/>
+                <field name="description"/>
+
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_details">
+                            <strong><field name="name"/></strong>
+                            <div><strong>Description:</strong> <field name="description"/></div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+</odoo>

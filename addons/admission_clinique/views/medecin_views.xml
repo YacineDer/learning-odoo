@@ -1,0 +1,22 @@
+<odoo>
+    <!-- Kanban view for Medecins -->
+    <record id="view_medecin_kanban" model="ir.ui.view">
+        <field name="name">clinique.medecin.kanban</field>
+        <field name="model">clinique.medecin</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name"/>
+                <field name="specialty"/>
+
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_details">
+                            <strong><field name="name"/></strong>
+                            <div><strong>Spécialité:</strong> <field name="specialty"/></div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+</odoo>
